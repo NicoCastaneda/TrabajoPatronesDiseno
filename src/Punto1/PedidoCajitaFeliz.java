@@ -3,7 +3,7 @@ package Punto1;
 public class PedidoCajitaFeliz extends ProcesadorDePedidos {
     @Override
     void tomarPedido() {
-        System.out.println("Tomando pedido... Cajita feliz");
+        System.out.println("Carrito de compra: Cajita feliz");
     }
 
     @Override
@@ -20,7 +20,7 @@ public class PedidoCajitaFeliz extends ProcesadorDePedidos {
 
     @Override
     void prepararPedido() {
-        System.out.println("Preparando cajita feliz");
+        System.out.println("Preparando..");
 
     }
 
