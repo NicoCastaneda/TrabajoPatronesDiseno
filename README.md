@@ -1,6 +1,6 @@
 Resumen y explicación de cada punto:
 
-Punto 1.
+Punto 1. Para este punto se escogió el patron Template. Este patron permite crear una clase padre que funcione como una plantila para subclases que requieran usar una serie de pasos definidida para diferentes casos concretos evitando el codigo duplicado. Para esto, se creo una clase abstracta ProcesadorDePedidos, que declara los pasos que contiene el algoritmo y el metodo que los contiene en el orden que se necesita. A partir de esto, se implementaron cuatro subclases concretad que implementan el algoritmo pero deben adaptar los metodos a cada tipo de pedido (PedidoCajitaFeliz, PedidoGaseosa, PedidoHamburguesa, PedidoSunday). 
 
 
 
@@ -28,7 +28,22 @@ Para realizarlo, se usaron las siguientes clases:
  
 
 
-Punto 3.
+Punto 3. Para este se elegió  el patrón Builder debido a que cumple con los requerimientos de la aplicación de una manera óptima, permitiendio construir menús  paso a paso y en el orden que interese además de reutilizar el mismo codigo Builder para armar todos los distintos menús, aislando el proceso de construcción al cliente quien solamente se deberá preocupar por asociar un objeto Builder con Director para mostrar cualquiera de los menus.
+
+Las clases utilizadas en este programa son:
+
+- Interfaz Builder: Define los pasos de construcción del menú que todos deben implementar: Plato principal, entrada, postre y bebida.
+
+- BuilderMenu/MenuEspecial1-2: Ofrecen distintas implementaciones de los pasos de construcción. Cada uno puede crear menús con diferentes combinaciones.
+
+- Menu: Tiene métodos para establecer los elementos del menú: setPlatoPrincipal(), setEntrante(), etc. Además de métodos para mostrar el menú completo como mostrarMenu() que imprime todos los elementos del menú.
+
+- Director: Define el orden en que se invocarán los pasos de construcción del menú.
+
+- Cliente (main): Asocia un objeto Builder con Director y utiliza este objeto para construir los distintos menús.
+
+/*Diagrama de Clases*/:![image](https://github.com/NicoCastaneda/TrabajoPatronesDiseno/assets/101200949/ecea1641-9657-46db-9f28-03dcb3abfced)
+
 
 
 
