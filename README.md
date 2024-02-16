@@ -19,12 +19,7 @@ Este patrón de diseño señala que puede existir una violación al principio de
 
 
 
-
-
-
-
-
-
+*Diagrama de Clases*:![image](https://github.com/NicoCastaneda/TrabajoPatronesDiseno/blob/main/Clase%20UML%20(1).png)
 
 
 Punto 2. Para este punto se eligio el patrón Command porque se adapta perfectamente a las necesidades del sistema de gestion de las tareas ya que permite separar el código que solicita acciones del que las ejecuta, lo que hace que el sistema sea más flexible y fácil de mantener, además facilita la adición de nuevas acciones sin modificar el código existente, simplemente agregando nuevos comandos concretos y puede permitir el registro de las acciones realizadas sobre las tareas para devolverlas si es necesario.
