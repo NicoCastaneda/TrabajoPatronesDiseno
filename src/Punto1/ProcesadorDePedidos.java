@@ -5,11 +5,14 @@ abstract class ProcesadorDePedidos {
 
         tomarPedido();
         verificarDisponibilidadPedido();
+        escogerJuguete();
+        adicionarHielo();
         calcularPrecioPedido();
         prepararPedido();
         enviarPedido();
         verificarEntregaPedido();
     }
+
 
     abstract void tomarPedido();
     abstract void verificarDisponibilidadPedido();
@@ -17,6 +20,12 @@ abstract class ProcesadorDePedidos {
     abstract void prepararPedido();
     abstract void enviarPedido();
     abstract void verificarEntregaPedido();
+    void escogerJuguete(){
+
+    }
+    void adicionarHielo(){
+
+    }
 
 }
 

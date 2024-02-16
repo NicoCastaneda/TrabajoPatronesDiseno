@@ -8,17 +8,20 @@ public class Main {
         pedirCajitaFeliz.procesarPedido();
 
         System.out.println("Pedido completado exitosamente");
+        System.out.println("\n");
 
 
-        ProcesadorDePedidos pedirGaseosa = new PedidoCajitaFeliz();
+        ProcesadorDePedidos pedirGaseosa = new PedidoGaseosa();
         pedirGaseosa.procesarPedido();
 
         System.out.println("Pedido completado exitosamente");
+        System.out.println("\n");
 
         ProcesadorDePedidos pedirHamburguesa = new PedidoHamburguesa();
         pedirHamburguesa.procesarPedido();
 
         System.out.println("Pedido completado exitosamente");
+        System.out.println("\n");
 
         ProcesadorDePedidos pedirSunday = new PedidoSunday();
         pedirSunday.procesarPedido();
