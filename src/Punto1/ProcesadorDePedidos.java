@@ -20,6 +20,8 @@ abstract class ProcesadorDePedidos {
     abstract void prepararPedido();
     abstract void enviarPedido();
     abstract void verificarEntregaPedido();
+
+
     void escogerJuguete(){
 
     }
