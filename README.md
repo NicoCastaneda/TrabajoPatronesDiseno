@@ -15,7 +15,7 @@ Para realizarlo se utilizó lo siguiente:
 
 - Main: Realiza un pedido de cada producto e imprime el paso a paso.
 
-Este patrón de diseño señala que puede existir una violación al principio de Liskov (En este caso sucede porque las clases PedidoHamburguesa() o PedidoSunday() no podrían implementar el método opcional escogerJuguete() porque no está incluido en el producto)
+Este patrón de diseño señala que puede existir una violación al principio de sustitución de Liskov (En este caso sucede porque las clases PedidoHamburguesa() o PedidoSunday() no podrían implementar el método opcional escogerJuguete() porque no está incluido en el producto)
 
 
 
