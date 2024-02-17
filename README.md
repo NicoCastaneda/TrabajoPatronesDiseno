@@ -69,6 +69,7 @@ Para este punto se eligió el patrón Decorator ya que permite añadir funcional
 
 Se escogió ya que podemos añadir los servicios adicionales de forma sencilla al encapsular el objeto original en un objeto decorador y añadirle funcionalidades adicionales sin modificar el objeto original.
 
+![image](https://github.com/NicoCastaneda/TrabajoPatronesDiseno/assets/101200949/d56f8778-2dc5-49fa-acd7-9525c3c86220)
 
 
 
@@ -78,6 +79,7 @@ Se escogió ya que podemos añadir los servicios adicionales de forma sencilla a
 Punto 5.
 Para este punto se escogió el patrón Bridge, ya que nos pide hacer 3 tipos de envíos, además nos pide tener diferentes velocidades de envío, por lo que al hacerlo de manera convencional terminaríamos con una cantidad de clases excesiva, por lo que el patrón Bridge nos permite separar la abstracción de la implementación, de manera que ambas puedan variar independientemente. En este caso, la abstracción es el tipo de envío y la implementación es la velocidad de envío. De esta manera, podemos tener una clase para cada tipo de envío y una clase para cada velocidad de envío, y combinarlas de manera que no tengamos que hacer una clase para cada combinación de tipo de envío y velocidad de envío.
 
+![image](https://github.com/NicoCastaneda/TrabajoPatronesDiseno/assets/101200949/004afd19-65be-46ee-8ae2-91663682a2cd)
 
 
 
