@@ -13,6 +13,11 @@ public class PedidoGaseosa extends ProcesadorDePedidos{
     }
 
     @Override
+    void adicionarHielo(){
+        System.out.println("Adicionar hielo: No");
+    }
+
+    @Override
     void calcularPrecioPedido() {
         System.out.println("Precio: $6.500");
 

@@ -1,15 +1,25 @@
 Resumen y explicación de cada punto:
 
-Punto 1. Para este punto se escogió el patron Template. Este patron permite crear una clase padre que funcione como una plantila para subclases que requieran usar una serie de pasos definidida para diferentes casos concretos evitando el codigo duplicado. Para esto, se creo una clase abstracta ProcesadorDePedidos, que declara los pasos que contiene el algoritmo y el metodo que los contiene en el orden que se necesita. A partir de esto, se implementaron cuatro subclases concretad que implementan el algoritmo pero deben adaptar los metodos a cada tipo de pedido (PedidoCajitaFeliz, PedidoGaseosa, PedidoHamburguesa, PedidoSunday). 
+Punto 1. Para este punto se escogió el patrón Template. Este patrón permite crear una clase padre que funcione como una plantilla para subclases que requieran usar una serie de pasos definida para diferentes casos concretos evitando el código duplicado. En este caso se utilizó como ejemplo un procesador de pedidos de McDonald´s que utiliza el mismo algoritmo para realizar el pedido en línea de cada producto, pero su funcionamiento depende de sus características, así que deben seguir una serie de pasos para completarse. Para esto, se creó una clase abstracta que declara los pasos que contiene el algoritmo y el método que los contiene en el orden que se necesita. A partir de esto, se implementaron cuatro subclases concretas que implementan el algoritmo, pero deben adaptar los métodos a cada tipo de pedido. 
+
+Para realizarlo se utilizó lo siguiente:
+
+- Clase ProcesadorDePedidos: Es una clase abstracta que define el método plantilla en el cual está contenido el algoritmo con todos los pasos que debe seguir una clase en orden de uso. Ahí se encuentran los métodos abstractos tomarPedido(), verificarDisponibilidadPedido(), calcularPrecioPedido(), prepararPedido(), enviarPedido() y verificarEntregaPedido(). Adicionalmente se encuentran los métodos hook (pasos opcionales en el programa) escogerJuguete() y adicionarAgua() ya que se encuentran vacíos, es decir que no van a realizar ninguna acción por defecto pero serán sobreescritos en las clases concretas que los necesiten permitiendo agregar estas funcionalidades sin afectar la estructura del algoritmo.
+
+- Clases concretas: Clases que representan el pedido de cada producto en específico. Implementa todos los métodos abstractos que hacen parte del algoritmo (excepto los opcionales) para ser utilizados en función de su propósito, por lo que van a variar los cálculos de precio, disponibilidad, toma de pedido, envíos, etc. 
+
+- Clase PedidoHamburguesa: Implementa todos los métodos abstractos de la clase ProcesadorDePedidos.
+- Clase PedidoCajitaFeliz: Implementa todos los métodos abstractos de la clase ProcesadorDePedidos y además sobrescribe el paso opcional escogerJuguete().
+- Clase PedidoGaseosa:  Implementa todos los métodos abstractos de la clase ProcesadorDePedidos y además sobrescribe el paso opcional adicionarHielo().
+- Clase PedidoSunday: Implementa todos los métodos abstractos de la clase ProcesadorDePedidos.
+
+- Main: Realiza un pedido de cada producto e imprime el paso a paso.
+
+Este patrón de diseño señala que puede existir una violación al principio de sustitución de Liskov (En este caso sucede porque las clases PedidoHamburguesa() o PedidoSunday() no podrían implementar el método opcional escogerJuguete() porque no está incluido en el producto)
 
 
 
-
-
-
-
-
-
+*Diagrama de Clases*:![image](https://github.com/NicoCastaneda/TrabajoPatronesDiseno/blob/main/Clase%20UML%20(1).png)
 
 
 Punto 2. Para este punto se eligio el patrón Command porque se adapta perfectamente a las necesidades del sistema de gestion de las tareas ya que permite separar el código que solicita acciones del que las ejecuta, lo que hace que el sistema sea más flexible y fácil de mantener, además facilita la adición de nuevas acciones sin modificar el código existente, simplemente agregando nuevos comandos concretos y puede permitir el registro de las acciones realizadas sobre las tareas para devolverlas si es necesario.

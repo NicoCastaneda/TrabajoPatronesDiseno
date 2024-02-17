@@ -9,7 +9,11 @@ public class PedidoCajitaFeliz extends ProcesadorDePedidos {
     @Override
     void verificarDisponibilidadPedido() {
         System.out.println("Producto disponible");
+    }
 
+    @Override
+    void escogerJuguete() {
+        System.out.println("Juguete: Mario Bros");
     }
 
     @Override
@@ -17,6 +21,8 @@ public class PedidoCajitaFeliz extends ProcesadorDePedidos {
         System.out.println("Precio: $22.500");
 
     }
+
+
 
     @Override
     void prepararPedido() {
@@ -35,4 +41,5 @@ public class PedidoCajitaFeliz extends ProcesadorDePedidos {
         System.out.println("El pedido fue entregado");
 
     }
+
 }
