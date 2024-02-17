@@ -55,7 +55,9 @@ Las clases utilizadas en este programa son:
 
 
 Punto 4.
+Para este punto se eligió el patrón Decorator ya que permite añadir funcionalidades a objetos de manera dinámica, sin necesidad de modificar su código. En este caso, se implementó el patrón para añadir decoraciones a una habitación de hotel a la que se le pueden añadir servicios adicionales como como flores frescas, chocolate gourmet, vino de alta calidad, etc.
 
+Se escogió ya que podemos añadir los servicios adicionales de forma sencilla al encapsular el objeto original en un objeto decorador y añadirle funcionalidades adicionales sin modificar el objeto original.
 
 
 
@@ -64,7 +66,7 @@ Punto 4.
 
 
 Punto 5.
-
+Para este punto se escogió el patrón Bridge, ya que nos pide hacer 3 tipos de envíos, además nos pide tener diferentes velocidades de envío, por lo que al hacerlo de manera convencional terminaríamos con una cantidad de clases excesiva, por lo que el patrón Bridge nos permite separar la abstracción de la implementación, de manera que ambas puedan variar independientemente. En este caso, la abstracción es el tipo de envío y la implementación es la velocidad de envío. De esta manera, podemos tener una clase para cada tipo de envío y una clase para cada velocidad de envío, y combinarlas de manera que no tengamos que hacer una clase para cada combinación de tipo de envío y velocidad de envío.
 
 
 
